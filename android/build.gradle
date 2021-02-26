@@ -1,0 +1,37 @@
+buildscript {
+    ext.kotlin_version = '1.4.30'
+    repositories {
+
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+        google()
+        jcenter()
+    }
+
+    dependencies {
+
+        classpath 'com.android.tools.build:gradle:3.5.4'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+        google()
+        jcenter()
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
