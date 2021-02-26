@@ -1,4 +1,4 @@
-# flutterapp1
+# Personality Test App
 
 A new Flutter application.
 
