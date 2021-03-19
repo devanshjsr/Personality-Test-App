@@ -32,6 +32,12 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  random_string: ^2.1.0
+  # Firebase
+  firebase_core: ^0.5.0+1
+  cloud_firestore: ^0.14.1+2
+  firebase_storage: ^4.0.1
+  firebase_auth: ^0.18.1+2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

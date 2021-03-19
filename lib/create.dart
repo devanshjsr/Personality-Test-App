@@ -1,4 +1,4 @@
-import 'package:flutter_app/database_services.dart';
+import 'database_services.dart';
 import 'package:flutter/material.dart';
 import 'package:random_string/random_string.dart';
 
@@ -33,8 +33,7 @@ class _CreateQuizState extends State<CreateQuiz> {
 
       setState(() {
         _loadingIndicator = false;
-        Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => AddQuetions(quizId)));
+        //TODO: Add Quetions
       });
     }
   }
